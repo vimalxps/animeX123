@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="add_fun"></div>
+    <form method="post" enctype="multipart/form-data" style="position:absolute;top:10%;left:45%;">
+        {% csrf_token %}
+        <p style="font-weight:bold;">Enter the anime name:</p>
+        <input type="text" name="name" placeholder="Enter the Anime Name"><br>
+        <p style="font-weight:bold;">Enter the description:</p>
+        <input type="text" name="desc" placeholder="Enter the Anime Description"><br>
+        <p style="font-weight:bold;">Total number of episodes:</p>
+        <input type="text" name="seasons" placeholder="Enter the no.of episodes"><br>
+        <p style="font-weight:bold;">Insert an image</p>
+        <input type="file" name="img"><br>
+        <button type="submit"style="position:absolute;top:120%;left:10%;background:blue;color:white">ADD DATA</button>
+    </form>
+</div>
+{% endblock %}
